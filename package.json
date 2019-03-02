@@ -1,0 +1,22 @@
+{
+  "name": "simple-chat-app-websockets-socket.io",
+  "version": "1.0.0",
+  "description": "Simple chat with WebSockets.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gustavodacrvi/Simple-chat-app-WebSockets-Socket.io.git"
+  },
+  "author": "Gustavo da Cruz Vieira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gustavodacrvi/Simple-chat-app-WebSockets-Socket.io/issues"
+  },
+  "homepage": "https://github.com/Gustavodacrvi/Simple-chat-app-WebSockets-Socket.io#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
