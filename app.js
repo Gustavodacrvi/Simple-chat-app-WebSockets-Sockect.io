@@ -1,15 +1,17 @@
 let express = require('express')
-
+let socket = require('socket.io')
 
 let app = express()
 
+app.use(express.static('static'))
 
-app.get('/', (req, res) => {
-  res.send('Hey vsauce! Michael here')
+
+let server = app.listen(3000, (req, res) => {
+  console.log('Server started at port 3000....')
 })
 
+let io = socket(server)
 
-
-app.listen(3000, (req, res) => {
-  console.log('App started at port 3000....')
+io.on('connection', (socket) => {
+  console.log('made socket connection.')
 })
