@@ -13,5 +13,8 @@ let server = app.listen(3000, (req, res) => {
 let io = socket(server)
 
 io.on('connection', (socket) => {
-  console.log('made socket connection.')
+  
+  socket.on('send', (data) => {
+    io.sockets.emit('send', data)
+  })
 })
