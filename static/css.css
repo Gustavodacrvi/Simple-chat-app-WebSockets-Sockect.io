@@ -41,6 +41,10 @@ body{
   flex-direction: column;
 }
 
+.chat .faded{
+  opacity: .4;
+}
+
 .chat input{
   padding: 10px;
   font-size: 1.05em;
@@ -48,6 +52,10 @@ body{
   border: none;
   border-top: 1px solid rgba(175, 175, 175, .3);
   outline: none;
+  color: rgb(60, 60, 60);
+}
+
+.chat span{
   color: rgb(60, 60, 60);
 }
 

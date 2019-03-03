@@ -4,6 +4,9 @@ let btn = document.getElementById('button')
 let out = document.getElementById('output')
 let hand = document.getElementById('handle')
 let msg = document.getElementById('message')
+let fdback = document.getElementById('feedback')
+
+let startedTyping
 
 btn.addEventListener('click', () => {
   socket.emit('send', {
@@ -12,6 +15,20 @@ btn.addEventListener('click', () => {
   })
 })
 
+msg.addEventListener('keypress', () => {
+  if (!startedTyping){
+    socket.emit('typing', hand.value)
+    startedTyping = true
+  }
+})
+
 socket.on('send', (data) => {
+  fdback.innerHTML = ''
+  startedTyping = false
   out.innerHTML += '<span><strong>' + data.hand + ': </strong>' + data.msg + '</span>'
 })
+
+socket.on('typing', (data) => {
+  fdback.innerHTML += '<span class="faded"><em>' + data + ' is typing... </em></span>'
+})
+
