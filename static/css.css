@@ -1,0 +1,73 @@
+
+
+@font-face{
+  font-family: 'Work Sans';
+  src: url("Work Sans/WorkSans-Light.otf");
+}
+
+body{
+  margin: 0;
+  font-family: 'Work Sans';
+}
+
+.chat{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat > div{
+  position: relative;
+  flex-basis: 600px;
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: 0px 10px 16px 4px rgba(200, 200, 200, .4);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat > div > :first-child{
+  height: 350px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.chat > div > :nth-child(2){
+  display: flex;
+  flex-direction: column;
+}
+
+.chat input{
+  padding: 10px;
+  font-size: 1.05em;
+  font-family: 'Work Sans';
+  border: none;
+  border-top: 1px solid rgba(175, 175, 175, .3);
+  outline: none;
+}
+
+.chat button{
+  width: 100%;
+  border: 0;
+  background-color: #00c8ff;
+  color: white;
+  outline: none;
+  padding: 12px;
+  font-family: 'Work Sans';
+  font-size: 1.05em;
+  cursor: pointer;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.chat button:hover{
+  background-color: #52d9ff;
+}
+
+.chat button:active{
+  background-color: #00c8ff;  
+}
